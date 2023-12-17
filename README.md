@@ -4,3 +4,6 @@ My solutions & other work for the projects included in the [Python Pro Bootcamp 
 
 ### Day 1 - Beginner - Working with variables in Python to manage data
 * [Solution: Cover Band name generator](/Day-001_band-name-generator/.)
+
+### Day 2 - Beginner - Understanding data types and how to manipulate strings
+* [Solution: Tip Calculator](day-002_tip-calculator/.)
