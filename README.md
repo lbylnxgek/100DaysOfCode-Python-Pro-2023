@@ -7,3 +7,6 @@ My solutions & other work for the projects included in the [Python Pro Bootcamp 
 
 ### Day 2 - Beginner - Understanding data types and how to manipulate strings
 * [Solution: Tip Calculator](/Day-002_tip-calculator/.)
+
+### Day 003 - Beginner - Control flow and logical operators
+* [Solution: Treasure Island](/Day-003_treasure_island/.)
