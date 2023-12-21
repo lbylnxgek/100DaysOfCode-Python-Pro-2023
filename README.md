@@ -10,3 +10,6 @@ My solutions & other work for the projects included in the [Python Pro Bootcamp 
 
 ### Day 003 - Beginner - Control flow and logical operators
 * [Solution: Treasure Island](/Day-003_treasure_island/.)
+
+### Day 004 - Beginner - Randomization and Python lists
+* [Coding challenge work and solution: Rock, Paper, Scissors!](/Day-004/.)
