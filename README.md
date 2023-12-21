@@ -3,13 +3,13 @@
 My solutions & other work for the projects included in the [Python Pro Bootcamp 2023 by Dr. Angela Yu](https://www.udemy.com/course/100-days-of-code/).
 
 ### Day 1 - Beginner - Working with variables in Python to manage data
-* [Solution: Cover Band name generator](/Day-001_band-name-generator/.)
+* [Solution: Cover Band name generator](/Day-001/.)
 
 ### Day 2 - Beginner - Understanding data types and how to manipulate strings
-* [Solution: Tip Calculator](/Day-002_tip-calculator/.)
+* [Solution: Tip Calculator](/Day-002/.)
 
 ### Day 003 - Beginner - Control flow and logical operators
-* [Solution: Treasure Island](/Day-003_treasure_island/.)
+* [Solution: Treasure Island](/Day-003/.)
 
 ### Day 004 - Beginner - Randomization and Python lists
 * [Coding challenge work and solution: Rock, Paper, Scissors!](/Day-004/.)
