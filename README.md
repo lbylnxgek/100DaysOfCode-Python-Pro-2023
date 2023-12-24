@@ -13,3 +13,6 @@ My solutions & other work for the projects included in the [Python Pro Bootcamp 
 
 ### Day 004 - Beginner - Randomization and Python lists
 * [Coding challenge work and solution: Rock, Paper, Scissors!](/Day-004/.)
+
+### Day 005 - Beginner - Python loops
+* [Solution: Random password generator](/Day-005/.)
