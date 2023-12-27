@@ -19,4 +19,8 @@ My solutions & other work for the projects included in the [Python Pro Bootcamp 
 
 ### Day 006 - Beginner - Python functions & Karel (really Reeborg) the robot
 * **NOTE: The project code does not currently work for the sample problem worlds, work is ongoing.
-* [Coding challenge work and solution: Reeborg's maze](/Day-006/.)  **NOTE: The solution code does not currently work for the sample problem worlds, work is ongoing.**
+* [Coding challenge work and solution: Reeborg's maze](/Day-006/.)
+* **Note: My solution (reeborgs-world-maze-redux.py) works for all three problem
+    samples and was 25/25 on random worlds.  That said I do not know if it would
+    work for larger/more complex worlds as it uses the build_wall() function.
+    The instructor's solution was definitely simpler and has been included as well.**
