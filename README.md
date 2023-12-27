@@ -16,3 +16,7 @@ My solutions & other work for the projects included in the [Python Pro Bootcamp 
 
 ### Day 005 - Beginner - Python loops
 * [Solution: Random password generator](/Day-005/.)
+
+### Day 006 - Beginner - Python functions & Karel (really Reeborg) the robot
+* **NOTE: The project code does not currently work for the sample problem worlds, work is ongoing.
+* [Coding challenge work and solution: Reeborg's maze](/Day-006/.)  **NOTE: The solution code does not currently work for the sample problem worlds, work is ongoing.**
