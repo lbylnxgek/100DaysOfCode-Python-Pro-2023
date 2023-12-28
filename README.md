@@ -23,3 +23,10 @@ My solutions & other work for the projects included in the [Python Pro Bootcamp 
     samples and was 25/25 on random worlds.  That said I do not know if it would
     work for larger/more complex worlds as it uses the build_wall() function.
     The instructor's solution was definitely simpler and has been included as well.**
+
+### Day 007 - Beginner - Hangman
+* [Solution: Hangman](/Day-007/project/.)
+* Note: There are a couple of features I want to add to this version:
+  * Use a bigger dictionary
+  * Display a list of letters already guessed (right, wrong or both?)
+  * Don't subtract a life if they guess a letter already guessed.  I thought that was already in the instructor's TODO but it doesn't appear to be.
