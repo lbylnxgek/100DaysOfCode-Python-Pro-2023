@@ -1,7 +1,9 @@
 import cipher_letters
 import art
+
 alphabet = cipher_letters.alphabet
 logo = art.logo
+
 
 def caesar(input_text, shift_number, cipher_direction):
     output_text = ""
@@ -25,6 +27,7 @@ def caesar(input_text, shift_number, cipher_direction):
             output_text += output_char
 
     print(f"The {direction}d text is: {output_text}\n")
+
 
 print(logo)
 
