@@ -42,3 +42,8 @@ My solutions & other work for the projects included in the [Python Pro Bootcamp 
 
 * [Project: Caesar cipher](/Day-008/)
 * Note: My solution re-prompts the user for valid responsese.  In particular I did not use the modulus (%) function to fix invalid shift input.
+
+## Day 009 - Beginner - Dictionaries, nesting and the Secret Auction
+
+* [Project: The Secret auction](/Day-009/.)
+* Note: Written as specified it will cheerfully overwrite a bidder with the same name
