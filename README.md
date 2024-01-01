@@ -47,3 +47,12 @@ My solutions & other work for the projects included in the [Python Pro Bootcamp 
 
 * [Project: The Secret auction](/Day-009/.)
 * Note: Written as specified it will cheerfully overwrite a bidder with the same name
+
+## Day 010 - Beginner - Functions with outputs
+
+* [Project: Calculator](/Day-010/.)
+* Note: my solution includes code to exit cleanly from the calulator, in order to avoid this:
+
+![Recursion!][def]
+
+[def]: /images/recursion_image.png
