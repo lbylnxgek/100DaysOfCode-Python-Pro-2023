@@ -56,3 +56,8 @@ My solutions & other work for the projects included in the [Python Pro Bootcamp 
 ![Recursion!][def]
 
 [def]: /images/recursion_image.png
+
+## Day 011 - Beginner - The Blackjack capstone project
+
+* [Capstone project 1: Blackjack](/Day-011/.)
+* Note: My solution handles Blackjacks differently fron the instructor's, but I think it works well.  I also did not move scoring to a separate function.
