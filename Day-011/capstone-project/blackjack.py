@@ -56,12 +56,16 @@ def play_blackjack():
     player_bust = False
     another_card = True
     player_cards = initialize_hand()
+    # DEBUG: Set initial hand to specific cards
+    # player_cards = [11, 10]
     player_score = calculate_score(player_cards)
 
     # Initialize dealer variables
     dealer_plays = True
     dealer_bust = False
     dealer_cards = initialize_hand()
+    # DEBUG: Set initial hand to specific cards
+    # dealer_cards = [10, 11]
     dealer_score = calculate_score(dealer_cards)
 
     # If one player has a Blackjack, neither gets to draw additional cards.
@@ -99,10 +103,12 @@ def play_blackjack():
 
     # Determine the winner
     if blackjack:
-        if dealer_score == 21:
-            print("\nDealer has Blackjack, you lose!")
-        else:
+        if player_score == dealer_score:
+            print("\nDraw - Double Blackjack!")
+        elif player_score == 21:
             print("\nBlackjack - you win!")
+        else:
+            print("\nDealer has Blackjack, you lose!")
     elif player_bust:
         print("\nBust - you lose!")
     elif dealer_bust:
