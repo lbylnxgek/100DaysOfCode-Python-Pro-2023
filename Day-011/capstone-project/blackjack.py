@@ -53,7 +53,6 @@ def play_blackjack():
 
     # Initialize player variables
     player_plays = True
-    player_bust = False
     another_card = True
     player_cards = initialize_hand()
     # DEBUG: Set initial hand to specific cards
@@ -62,7 +61,6 @@ def play_blackjack():
 
     # Initialize dealer variables
     dealer_plays = True
-    dealer_bust = False
     dealer_cards = initialize_hand()
     # DEBUG: Set initial hand to specific cards
     # dealer_cards = [10, 11]
@@ -79,14 +77,14 @@ def play_blackjack():
     print(f"  - Dealer's first card: {dealer_cards[0]}")
 
     # Player turn
-    while player_plays and another_card and not player_bust:
+    while player_plays and another_card:
         another_card = input("Enter 'y' for another card or 'n' to stand: ").lower()
         if another_card == "y":
             player_cards.append(deal_card())
             player_score = calculate_score(player_cards)
             print(f"  - Your cards: {player_cards}, current score = {player_score}")
             if player_score > 21:
-                player_bust = True
+                player_plays = False
                 dealer_plays = False
         elif another_card == "n":
             another_card = False
@@ -95,11 +93,11 @@ def play_blackjack():
 
     # Dealer plays if neither has a blackjack and player has not gone bust.
     # Dealer must hit as long as score < 17.
-    while dealer_plays and dealer_score < 17 and not dealer_bust:
+    while dealer_plays and dealer_score < 17:
         dealer_cards.append(deal_card())
         dealer_score = calculate_score(dealer_cards)
         if dealer_score > 21:
-            dealer_bust = True
+            dealer_plays = False
 
     # Determine the winner
     if blackjack:
@@ -109,9 +107,9 @@ def play_blackjack():
             print("\nBlackjack - you win!")
         else:
             print("\nDealer has Blackjack, you lose!")
-    elif player_bust:
+    elif player_score > 21:
         print("\nBust - you lose!")
-    elif dealer_bust:
+    elif dealer_score > 21:
         print("\nDealer busts - you win!")
     elif player_score > dealer_score:
         print("\nYou win!")
@@ -132,3 +130,4 @@ while play_game:
         play_blackjack()
     else:
         play_game = False
+        print("\nThank you for playing. End of Line.")
