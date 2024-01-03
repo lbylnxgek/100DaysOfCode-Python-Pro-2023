@@ -24,28 +24,25 @@ def calculate_score(card_list):
     last_card = card_list[len(card_list) - 1]
 
     # If the cards total over 21 and the last card is an ace, change the
-    # value from 11 to 1.
+    # list item from 11 to 1.
     if sum(card_list) > 21 and last_card == 11:
         card_list[len(card_list) - 1] = 1
     return sum(card_list)
 
 
 def deal_card():
-    """Select a random card from and return the value."""
+    """Returns a random card from the deck."""
+    cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
     card = random.choice(cards)
     return card
 
 
 def initialize_hand():
-    """Initialize player hand, return cards as a list"""
+    """Return two cards from the deck as a list."""
     card_list = []
     card_list.append(deal_card())
     card_list.append(deal_card())
     return card_list
-
-
-# Initialize deck of cards
-cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
 
 
 def play_blackjack():
