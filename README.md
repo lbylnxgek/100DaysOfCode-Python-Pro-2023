@@ -67,3 +67,26 @@ My solutions & other work for the projects included in the [Python Pro Bootcamp 
 * [Project: Guess the number game](/Day-012/.)
 * Note: My understanding of general code design is to minimize the number of global variables, which should be named using uppercase letters and not modified.  Try to put variables that will be modified in functions if possible.
 * Note: Try to adopt the use of global variables declared at the top of the file as a way to adjust settings without having to change the code.  Depending on the project, it might be better to move them to a separate config / credentials file.
+
+## Day 013 - Beginner - Debugging - How to find and fix errors in your code
+
+* No project in this lesson, just interactive coding exercises on Auditorium
+* Troubleshooting principles, most of which I already use but sometimes a reminder is good:
+  * Describe the problem
+  * Reproduce the bug
+  * Play computer and evaluate each line
+  * Fix the errors and watch for red underlines
+  * Print is your BFF!
+  * Use a debugger
+    * Resource: <https://pythontutor.com/visualize.html#mode=edit>
+    * Set breakpoints to see how many times the line is executed
+  * Take a break!
+  * Ask a friend - not your friend print(). They won't make the same assumptions you have - fresh eyes.
+  * Run the code often
+  * Ask StackOverflow (The Oracle?)
+    * Resource: <https://stackoverflow.com/questions/tagged/python>
+  * Be sensitive to how code looks.  The more code you read, the better you get at debugging.
+* My 3 favorite Dr. Yu quotes in this lesson:
+  * "You know you've become a professional developer when you create really big bugs."
+  * "If Hollywood movies portray hackers as typing away, that is not the truth. Most of the time we are debugging, we are staring deep into space and trying to figure out what it is that we've written that is causing this catastrophic failure of our code."
+  * Failure is your friend.
