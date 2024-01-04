@@ -33,7 +33,7 @@ print("I'm thinking of a number between 1 and 100.")
 # Pick a random number
 number = random.randint(1, 100)
 # DEBUG: Print random number
-print(f"DEBUG: The number is {number}.")
+# print(f"DEBUG: The number is {number}.")
 
 # Set number of guesses
 guesses_remaining = set_difficulty_level()
