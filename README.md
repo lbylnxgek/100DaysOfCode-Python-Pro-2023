@@ -89,4 +89,4 @@ My solutions & other work for the projects included in the [Python Pro Bootcamp 
 * My 3 favorite Dr. Yu quotes in this lesson:
   * "You know you've become a professional developer when you create really big bugs."
   * "If Hollywood movies portray hackers as typing away, that is not the truth. Most of the time we are debugging, we are staring deep into space and trying to figure out what it is that we've written that is causing this catastrophic failure of our code."
-  * Failure is your friend.
+  * "Failure is your friend."
