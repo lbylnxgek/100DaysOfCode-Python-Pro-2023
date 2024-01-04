@@ -61,3 +61,9 @@ My solutions & other work for the projects included in the [Python Pro Bootcamp 
 
 * [Capstone project 1: Blackjack](/Day-011/.)
 * Note: My solution handles Blackjacks differently fron the instructor's, but I think it works well.  I also did not move scoring to a separate function.
+
+## Day 012 - Beginner - Scope & number guessing game
+
+* [Project: Guess the number game](/Day-012/.)
+* Note: My understanding of general code design is to minimize the number of global variables, which should be named using uppercase letters and not modified.  Try to put variables that will be modified in functions if possible.
+* Note: Try to adopt the use of global variables declared at the top of the file as a way to adjust settings without having to change the code.  Depending on the project, it might be better to move them to a separate config / credentials file.
