@@ -56,6 +56,9 @@ def play_game(a_index, score):
         print(f"DEBUG: a= {a_index}, followers= {data[a_index]["follower_count"]}")
 
     b_index = random_record()
+    while b_index == a_index:
+         b_index = random_record()
+
     print_game_info(b_index, "b")
     if DEBUG:
         print(f"DEBUG: b= {b_index}, followers= {data[b_index]["follower_count"]}")
@@ -75,8 +78,7 @@ def play_game(a_index, score):
     # Determine winner.  If player chooses correctly, keep playing
     if guess == correct_answer:
         score += 1
-        if correct_answer == "b":
-            a_index = b_index
+        a_index = b_index
         os.system("clear")
         print("That's correct, well done!")
         print(f"Your current score is: {score}")
