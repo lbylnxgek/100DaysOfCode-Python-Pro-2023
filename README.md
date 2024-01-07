@@ -90,3 +90,10 @@ My solutions & other work for the projects included in the [Python Pro Bootcamp 
   * "You know you've become a professional developer when you create really big bugs."
   * "If Hollywood movies portray hackers as typing away, that is not the truth. Most of the time we are debugging, we are staring deep into space and trying to figure out what it is that we've written that is causing this catastrophic failure of our code."
   * Failure is your friend.
+
+## Day 014 - Beginner - Higher Lower game project
+
+* [Project: The Higher Lower game](/Day-014/.)
+  * Minimal instruction provided for this project, only the ASCII art and data dictionary.
+  * This was challenging but it helped me to absorb some of the previous lessons, in particular variable scope and creating a recursive function.  The main body of code contains just 4 lines.
+  * I also used my friend Brian Whitley's suggestion about DEBUG statements.  Namely, declare DEBUG as a global variable (True/False) and wrap debugging print statements in an if statement to print them (or not) as needed.
