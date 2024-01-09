@@ -72,7 +72,7 @@ def insert_coins(item_cost):
         return True
     elif total == item_cost:
         if DEBUG:
-            print(f"DEBUG: Exact change.")
+            print("DEBUG: Exact change.")
         return True
     else:
         shortage = item_cost - total
@@ -125,9 +125,9 @@ def order_coffee():
 
     if order == "report":
         print("\nCurrent supply levels are:")
-        print(f"  Coffee: {resources["coffee"]}g")
-        print(f"  Water: {resources["water"]}ml")
-        print(f"  Milk: {resources["milk"]}ml")
+        print(f"  Coffee: {resources['coffee']}g")
+        print(f"  Water: {resources['water']}ml")
+        print(f"  Milk: {resources['milk']}ml")
         print(f"  Money: ${cashbox:.2f}")
         order_coffee()
     elif order == "off":
