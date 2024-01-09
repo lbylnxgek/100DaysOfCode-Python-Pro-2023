@@ -60,7 +60,7 @@ My solutions & other work for the projects included in the [Python Pro Bootcamp 
 ## Day 011 - Beginner - The Blackjack capstone project
 
 * [Capstone project 1: Blackjack](/Day-011/.)
-* Note: My solution handles Blackjacks differently fron the instructor's, but I think it works well.  I also did not move scoring to a separate function.
+* Note: My solution handles Blackjacks differently from the instructor's, but I think it works well.  I also did not move scoring to a separate function.
 
 ## Day 012 - Beginner - Scope & number guessing game
 
@@ -97,3 +97,9 @@ My solutions & other work for the projects included in the [Python Pro Bootcamp 
   * Minimal instruction provided for this project, only the ASCII art and data dictionary.
   * This was challenging but it helped me to absorb some of the previous lessons, in particular variable scope and creating a recursive function.  The main body of code contains just 4 lines.
   * I also used my friend Brian Whitley's suggestion about DEBUG statements.  Namely, declare DEBUG as a global variable (True/False) and wrap debugging print statements in an if statement to print them (or not) as needed.
+
+## Day 015 - Intermediate - Setup local development environment & coffee machine project
+
+* [Project: The Coffee machine](/Day-015/.)
+* The coffee machine - with a nod to [H2G2](https://hitchhikers.fandom.com/wiki/Sirius_Cybernetics_Corporation)
+* This was a challenging but fun project.  I had some issues updating a global variable within a function and had to work it out by doing some research, along with some trial & error.
