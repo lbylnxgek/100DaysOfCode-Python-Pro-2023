@@ -52,7 +52,7 @@ def insert_coins(order_cost):
         if DEBUG:
             print("  * DEBUG: Exact change.")
             print(f"  * DEBUG: Adding {order_cost} to cashbox")
-            cashbox += order_cost
+        cashbox += order_cost
         if DEBUG:
             print(f"  * DEBUG New cashbox amount = {cashbox}")
         return True
