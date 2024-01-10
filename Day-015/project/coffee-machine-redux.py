@@ -1,6 +1,7 @@
 from data import MENU, resources
 
 DEBUG = False
+menu_items = []
 cashbox = 0.00
 
 
@@ -82,14 +83,30 @@ def brew_coffee(order_ingredients):
         if DEBUG:
             print(f"  * DEBUG: resources={resources}")
 
+def coffee_menu():
+    """Generates the global menu_items list, based on keys in MENU"""
+
+    global menu_items
+    for item in MENU:
+        menu_items.append(item)
+    menu_items.sort()
+    if DEBUG:
+        print(f"  * DEBUG: menu_items={menu_items}")
+
+
+def print_menu_items():
+    """Returns a formatted list of menu items"""
+
+    for item in menu_items:
+        print(f"  - {item.capitalize()} - ${MENU[item]['cost']:.2f}")
+
+
 
 def order_coffee():
     """Coffee machine main routine"""
+
     print("\nWelcome to the Sirius Cybernetics Corporation coffee machine.")
-    print("Available beverages are:")
-    print("  - Espresso - $1.50")
-    print("  - Latte - $2.50")
-    print("  - Cappuccino - $3.00")
+    print_menu_items()
     selection = input(
         "What would you like to drink (espresso/latte/cappuccino)? "
     ).lower()
@@ -104,7 +121,7 @@ def order_coffee():
         print(f"  Milk: {resources['milk']}ml")
         print(f"  Money: ${cashbox:.2f}")
         order_coffee()
-    elif selection in ["espresso", "latte", "cappuccino"]:
+    elif selection in menu_items:
         drink = MENU[selection]
         if DEBUG:
             print(f"  * DEBUG: order={selection} drink={drink}")
@@ -129,4 +146,5 @@ def order_coffee():
         order_coffee()
 
 
+coffee_menu()
 order_coffee()
