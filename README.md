@@ -103,3 +103,14 @@ My solutions & other work for the projects included in the [Python Pro Bootcamp 
 * [Project: The Coffee machine](/Day-015/.)
 * The coffee machine - with a nod to [H2G2](https://hitchhikers.fandom.com/wiki/Sirius_Cybernetics_Corporation)
 * This was a challenging but fun project.  I had some issues updating a global variable within a function and had to work it out by doing some research, along with some trial & error.
+
+### Coffee machine redux
+
+* I was not happy with the way my code came out, so I decided to try again.  Much happier with the second version.  Lessons learned:
+  * Don't forget what you already know (an old one)
+  * When in doubt, grab the entire list. It makes extracting what you want easier.
+* My revised version also has the following features:
+  * A better menu item display
+  * More resources! (for better testing)
+  * A **lot** of DEBUGGING statements, easily enabled/disabled via the global DEBUG
+  * Functions to dynamically generate the menu list and items on the order input line.  This automatically picks up additions to the MENU dictionary with no code changes.
