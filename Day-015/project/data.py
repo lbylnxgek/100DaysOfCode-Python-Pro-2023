@@ -22,6 +22,14 @@ MENU = {
         },
         "cost": 3.0,
     },
+    "goldeneagle": {
+        "ingredients": {
+            "water": 200,
+            "milk": 75,
+            "coffee": 35,
+        },
+        "cost": 3.25,
+    },
 }
 
 resources = {
