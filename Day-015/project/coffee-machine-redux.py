@@ -2,6 +2,7 @@ from data import MENU, resources
 
 DEBUG = False
 menu_items = []
+menu_string = ""
 cashbox = 0.00
 
 
@@ -83,6 +84,7 @@ def brew_coffee(order_ingredients):
         if DEBUG:
             print(f"  * DEBUG: resources={resources}")
 
+
 def coffee_menu():
     """Generates the global menu_items list, based on keys in MENU"""
 
@@ -95,10 +97,24 @@ def coffee_menu():
 
 
 def print_menu_items():
-    """Returns a formatted list of menu items"""
+    """Prints a formatted list of menu items"""
 
     for item in menu_items:
         print(f"  - {item.capitalize()} - ${MENU[item]['cost']:.2f}")
+
+
+def format_menu_string():
+    """Generates a formatted string of menu items, saved to global menu_string"""
+
+    global menu_string
+    for item in menu_items:
+        menu_string += item
+        menu_string += "/"
+
+    # Trim trailing slash from string
+    menu_string = menu_string[:-1]
+    if DEBUG:
+        print(f"  * DEBUG: menu_string={menu_string}")
 
 
 
@@ -107,9 +123,7 @@ def order_coffee():
 
     print("\nWelcome to the Sirius Cybernetics Corporation coffee machine.")
     print_menu_items()
-    selection = input(
-        "What would you like to drink (espresso/latte/cappuccino)? "
-    ).lower()
+    selection = input(f"What would you like to drink ({menu_string})? ").lower()
 
     if selection == "off":
         print("\nPowering off.")
@@ -147,4 +161,5 @@ def order_coffee():
 
 
 coffee_menu()
+format_menu_string()
 order_coffee()
