@@ -114,3 +114,12 @@ My solutions & other work for the projects included in the [Python Pro Bootcamp 
   * More resources! (for better testing)
   * A **lot** of DEBUGGING statements, easily enabled/disabled via the global DEBUG
   * Functions to dynamically generate the menu list and items on the order input line.  This automatically picks up additions to the MENU dictionary with no code changes.
+
+## Day 016 - Intermediate - Object Oriented Programming (OOP)
+
+* [Project: The Coffee machine in OOP](/Day-016/.)
+* The classes were provided, with the goal of learning how to use them.  I understood the concept but struggled a bit with the implementation.  RTFD a bit more thoroughly.
+* Since the provides classes did a lot of the heavy lifting, the code written was fairly short
+* My version does a couple of extra things:
+  * Lists the drink cost, formatted in currency ($0.00)
+  * Checks for an invalid selection and re-prompts
