@@ -41,7 +41,7 @@ My solutions & other work for the projects included in the [Python Pro Bootcamp 
 ## Day 008 - Beginner - Function parameters & Caesar cipher
 
 * [Project: Caesar cipher](/Day-008/)
-* Note: My solution re-prompts the user for valid responsese.  In particular I did not use the modulus (%) function to fix invalid shift input.
+* Note: My solution re-prompts the user for valid responses.  In particular I did not use the modulus (%) function to fix invalid shift input.
 
 ## Day 009 - Beginner - Dictionaries, nesting and the Secret Auction
 
@@ -51,7 +51,7 @@ My solutions & other work for the projects included in the [Python Pro Bootcamp 
 ## Day 010 - Beginner - Functions with outputs
 
 * [Project: Calculator](/Day-010/.)
-* Note: my solution includes code to exit cleanly from the calulator, in order to avoid this:
+* Note: my solution includes code to exit cleanly from the calculator, in order to avoid this:
 
 ![Recursion!][def]
 
