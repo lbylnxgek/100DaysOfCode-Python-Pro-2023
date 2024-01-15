@@ -123,3 +123,11 @@ My solutions & other work for the projects included in the [Python Pro Bootcamp 
 * My version does a couple of extra things:
   * Lists the drink cost, formatted in currency ($0.00)
   * Checks for an invalid selection and re-prompts
+
+## Day 017 - Intermediate - The Quiz project & the benefits of OOP
+
+* [Project: The Quiz game in OOP](/Day-017/.)
+* Still having trouble putting the concept into code, but getting there.
+* The final version of the code uses questions from [Open Trivia Database](https://opentdb.com/)
+  * Code changes were minimal, two variable names in main.py were adjusted to reflect the new data structure
+  * Some cleanup of the API data was necessary for formatting to look correct, in particular removal of '&quot;'

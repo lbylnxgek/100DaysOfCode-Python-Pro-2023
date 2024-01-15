@@ -4,8 +4,8 @@ from data import question_data
 
 question_bank = []
 for question in question_data:
-    q_text = question["text"]
-    q_answer = question["answer"]
+    q_text = question["question"]
+    q_answer = question["correct_answer"]
     new_question = Question(question_text=q_text, answer_text=q_answer)
     question_bank.append(new_question)
 
