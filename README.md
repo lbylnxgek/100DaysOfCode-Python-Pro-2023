@@ -131,3 +131,14 @@ My solutions & other work for the projects included in the [Python Pro Bootcamp 
 * The final version of the code uses questions from [Open Trivia Database](https://opentdb.com/)
   * Code changes were minimal, two variable names in main.py were adjusted to reflect the new data structure
   * Some cleanup of the API data was necessary for formatting to look correct, in particular removal of '&quot;'
+
+## Day 018 - Intermediate - Turtle & the Graphical User Interface (GUI)
+
+* [Coding work: Timmy the turtle draws a dashed line, shapes and goes on a random walkabout](/Day-018/coding-work/.)
+  * Timmy got limbered up during the coding work, even if he did wander off the map sometimes while out for a random walkabout.
+* [Project: Timmy the turtle draws Hirst dots](/Day-018/project/.)
+  * Now that Timmy's an artist maybe he will make millions!  Then I can retire and take more Udemy classes.
+  * I came up with a completely different solution to this project:
+    * I used the setworldcoordinates() method to set the home coordinates (0, 0) in the lower left of the screen instead of the middle
+    * Then I used two nested for loops to set the x & y coordinates and teleport() to move Timmy
+    * I don't know if this would be problematic on a different screen size, I'd have to check

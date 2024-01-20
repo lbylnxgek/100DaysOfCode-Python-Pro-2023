@@ -1,19 +1,21 @@
 # This section of code is used to generate color_list from an image
 # and is not needed once that has been done
-import colorgram
+# import colorgram
 
-colors = colorgram.extract("image.jpg", 50)
-rgb_list = []
-
-
-for color in colors:
-    rgb = color.rgb
-    rgb_tuple = (rgb.r, rgb.g, rgb.b)
-    rgb_list.append(rgb_tuple)
+# colors = colorgram.extract("image.jpg", 50)
+# rgb_list = []
 
 
-print(rgb_list)
+# for color in colors:
+#     rgb = color.rgb
+#     rgb_tuple = (rgb.r, rgb.g, rgb.b)
+#     rgb_list.append(rgb_tuple)
 
+
+# print(rgb_list)
+
+# Note: RGB tuples with high values should be checked as they may be part of the
+# original image background and too light for dots
 color_list = [
     (198, 166, 109),
     (141, 77, 54),
@@ -46,3 +48,24 @@ color_list = [
     (38, 68, 66),
     (43, 81, 82),
 ]
+
+from turtle import Turtle, Screen
+import random
+
+timmy = Turtle()
+timmy.shape("turtle")
+screen = Screen()
+screen.title("Timmy draws Hirst")
+screen.colormode(255)
+screen.setworldcoordinates(-5, -5, 97, 97)
+
+for y in range(0, 100, 10):
+    for x in range(0, 100, 10):
+        # print(f"coords: {x}, {y}")
+        timmy.dot(20, random.choice(color_list))
+        timmy.teleport(x, y)
+
+timmy.dot(20, random.choice(color_list))
+timmy.hideturtle()
+
+screen.exitonclick()
