@@ -3,7 +3,7 @@ import random
 
 screen = Screen()
 screen.setup(width=500, height=400)
-screen.title("Turtles, start your engines!")
+screen.title("Welcome to Roy G. Biv Speedway: Turtles, start your engines!")
 
 colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"]
 all_turtles = []
@@ -35,14 +35,27 @@ while race_on:
         random_distance = random.randint(0, 10)
         turtle.forward(random_distance)
         if turtle.xcor() > 225:
-            winning_turtle = turtle.pencolor()
-            race_on = False
-            if user_bet == winning_turtle:
-                print(
-                    f"The winning turtle is {winning_turtle}. Congratulations, you win!"
+            winning_turtle = turtle
+            winning_turtle_color = turtle.pencolor()
+            winning_turtle.home()
+            winning_turtle.right(1350)
+            winning_turtle.pencolor("black")
+            if user_bet == winning_turtle_color:
+                turtle.write(
+                    f"The winning turtle is {winning_turtle_color}. Congratulations, you win!    ",
+                    align="center",
+                    font=("Arial", 8, "normal"),
+                    move=True,
                 )
             else:
-                print(f"The winning turtle is {winning_turtle}. Better luck next time.")
-
+                turtle.write(
+                    f"The winning turtle is {winning_turtle_color}. Better luck next time.    ",
+                    align="center",
+                    font=("Arial", 8, "normal"),
+                    move=True,
+                )
+            # Break out of for loop to avoid multiple winners
+            race_on = False
+            break
 
 screen.exitonclick()

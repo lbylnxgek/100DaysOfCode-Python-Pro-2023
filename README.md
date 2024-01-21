@@ -142,3 +142,15 @@ My solutions & other work for the projects included in the [Python Pro Bootcamp 
     * I used the setworldcoordinates() method to set the home coordinates (0, 0) in the lower left of the screen instead of the middle
     * Then I used two nested for loops to set the x & y coordinates and teleport() to move Timmy
     * I don't know if this would be problematic on a different screen size, I'd have to check
+
+## Day 019 - Intermediate - Instances, state and higher order functions
+
+* [Coding work: Etch-A-Sketch with Timmy the Turtle](/Day-019/coding-work/.)
+* [Project: Timmy the Turtle goes racing](/Day-019/project/.)
+  * Timmy and his buddies go racing at Roy G. Biv Speedway!  Can you guess the winner?
+  * This project created multiple instances of the Turtle class for the raceway.  All the turtle objects were placed in a list for easy looping.
+  * My final version includes a couple of extras:
+    * Set the window title
+    * The winning turtle does a burnout in the middle of the screen
+    * The winning turtle is announced on the screen
+    * A break condition to prevent multiple winners
