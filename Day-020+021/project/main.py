@@ -5,9 +5,10 @@ from scoreboard import Scoreboard
 import time
 
 # Difficulty level: Smaller number = faster snake
-SLEEP_TIME = 0.2
+SLEEP_TIME = 0.15
 
 screen = Screen()
+screen.colormode(255)
 screen.setup(width=600, height=600)
 screen.bgcolor("black")
 screen.title("Snake Game")

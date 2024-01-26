@@ -154,3 +154,13 @@ My solutions & other work for the projects included in the [Python Pro Bootcamp 
     * The winning turtle does a burnout in the middle of the screen
     * The winning turtle is announced on the screen
     * A break condition to prevent multiple winners
+
+## Day 020 & 021 - Intermediate Animation, coordinates, inheritance and slicing
+
+* [Project: Build the classic Snake Game!](/Day-020+021/project/.)
+  * No need to dig out that old Nokia phone, you can build & play the snake game in Python
+  * My version generates random color snake segments
+  * Things to work on incorporating into my programming:
+    * Write some code for testing, then move it to functions or methods as needed
+    * Separate things into smaller functions / methods for easier re-use.  Refactoring is your friend!
+    * "Use the CONSTANTS, Luke" (my phrase) to tweak settings without having to dig into the code
