@@ -155,7 +155,7 @@ My solutions & other work for the projects included in the [Python Pro Bootcamp 
     * The winning turtle is announced on the screen
     * A break condition to prevent multiple winners
 
-## Day 020 & 021 - Intermediate Animation, coordinates, inheritance and slicing
+## Day 020 & 021 - Intermediate - Animation, coordinates, inheritance and slicing
 
 * [Project: Build the classic Snake Game!](/Day-020+021/project/.)
   * No need to dig out that old Nokia phone, you can build & play the snake game in Python
