@@ -1,4 +1,6 @@
 from turtle import Screen, Turtle
+from paddle import Paddle
+
 
 screen = Screen()
 screen.setup(width=800, height=600)
@@ -25,29 +27,14 @@ for _ in range(0, 29):
 center_line.hideturtle()
 screen.update()
 
-
-def paddle_up():
-    new_y = r_paddle.ycor() + 20
-    r_paddle.goto(r_paddle.xcor(), new_y)
-
-
-def paddle_down():
-    new_y = r_paddle.ycor() - 20
-    r_paddle.goto(r_paddle.xcor(), new_y)
-
-
-# Create right paddle
-r_paddle = Turtle()
-r_paddle.shape("square")
-r_paddle.color("white")
-r_paddle.shapesize(stretch_len=1, stretch_wid=5)
-r_paddle.penup()
-r_paddle.goto(350, 0)
-screen.update()
+r_paddle = Paddle((350, 0))
+l_paddle = Paddle((-350, 0))
 
 screen.listen()
-screen.onkey(paddle_up, "Up")
-screen.onkey(paddle_down, "Down")
+screen.onkey(r_paddle.paddle_up, "Up")
+screen.onkey(r_paddle.paddle_down, "Down")
+screen.onkey(l_paddle.paddle_up, "w")
+screen.onkey(l_paddle.paddle_down, "s")
 
 game_on = True
 while game_on:
