@@ -32,7 +32,6 @@ screen.update()
 r_paddle = Paddle((350, 0))
 l_paddle = Paddle((-350, 0))
 ball = Ball()
-ball.serve()
 
 screen.listen()
 screen.onkey(r_paddle.paddle_up, "Up")

@@ -1,34 +1,16 @@
 from turtle import Turtle
 import random
 
-SERVE_DIRECTIONS = (
-    0,
-    15,
-    30,
-    45,
-    135,
-    150,
-    165,
-    180,
-    195,
-    210,
-    225,
-    315,
-    330,
-    345,
-)
-
 
 class Ball(Turtle):
     def __init__(self) -> None:
         """Create ball object"""
         super().__init__()
-        self.shape("circle")
+        self.shape("square")
         self.color("white")
         self.penup()
 
     def move(self):
-        self.forward(5)
-
-    def serve(self):
-        self.setheading(random.choice(SERVE_DIRECTIONS))
+        new_x = self.xcor() + 10
+        new_y = self.ycor() + 10
+        self.goto(new_x, new_y)
