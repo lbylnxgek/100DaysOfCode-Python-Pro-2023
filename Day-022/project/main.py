@@ -46,9 +46,17 @@ while game_on:
     screen.update()
     ball.move()
 
-    # Detect collision with wall & change direction
+    # Detect collision with wall & bounce
     if ball.collide_with_wall():
-        ball.bounce()
+        ball.bounce_y()
+
+    # Detect collision with right paddle & change direction
+    if ball.distance(r_paddle) < 50 and ball.xcor() > 320:
+        ball.bounce_x()
+
+    # Detect collision with left paddle & bounce
+    if ball.distance(l_paddle) < 50 and ball.xcor() < -320:
+        ball.bounce_x()
 
 
 screen.exitonclick()

@@ -25,5 +25,8 @@ class Ball(Turtle):
     def collide_with_wall(self):
         return self.ycor() > 280 or self.ycor() < -280
 
-    def bounce(self):
+    def bounce_y(self):
         self.y_move *= -1
+
+    def bounce_x(self):
+        self.x_move *= -1
