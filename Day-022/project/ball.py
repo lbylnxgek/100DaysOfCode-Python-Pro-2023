@@ -14,3 +14,6 @@ class Ball(Turtle):
         new_x = self.xcor() + 10
         new_y = self.ycor() + 10
         self.goto(new_x, new_y)
+
+    def collide_with_wall(self):
+        return self.ycor() > 295 or self.ycor() < -295

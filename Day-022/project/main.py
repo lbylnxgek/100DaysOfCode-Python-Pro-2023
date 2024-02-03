@@ -46,5 +46,9 @@ while game_on:
     screen.update()
     ball.move()
 
+    # Detect collision with wall & change direction
+    if ball.collide_with_wall():
+        game_on = False
+
 
 screen.exitonclick()
