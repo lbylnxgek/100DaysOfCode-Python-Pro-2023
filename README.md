@@ -164,3 +164,14 @@ My solutions & other work for the projects included in the [Python Pro Bootcamp 
     * Write some code for testing, then move it to functions or methods as needed
     * Separate things into smaller functions / methods for easier re-use.  Refactoring is your friend!
     * "Use the CONSTANTS, Luke" (my phrase) to tweak settings without having to dig into the code
+
+## Day 022 - Intermediate - Build Pong, the famous arcade game
+
+* [Project: Build Pong, OOP style](/Day-022/.)
+  * This project definitely tested my OOP skills.  My bounce solution was more difficult than it needed to be.  Reworked the code after watching her solution.  Some things to keep in mind:
+    * Pay a bit more attention to the goal in each section.  Doing so might have kept me from making the bounce code needlessly complicated
+    * Try not to overthink things!
+  * My solution has the following extra features:
+    * Speed the ball up after each contact with a paddle
+    * Dashed center line
+    * Game over / winner condition
