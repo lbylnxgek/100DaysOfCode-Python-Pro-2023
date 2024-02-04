@@ -27,7 +27,7 @@ screen.onkey(l_paddle.paddle_down, "s")
 
 game_on = True
 while game_on:
-    time.sleep(0.1)
+    time.sleep(ball.move_delay)
     screen.update()
     ball.move()
 
