@@ -1,7 +1,7 @@
 from turtle import Turtle
 import random
 
-DEBUG = True
+DEBUG = False
 
 
 class Ball(Turtle):
