@@ -4,6 +4,8 @@ from ball import Ball
 from scoreboard import Scoreboard
 import time
 
+WINNING_SCORE = 10
+
 
 screen = Screen()
 screen.setup(width=800, height=600)
@@ -54,6 +56,11 @@ while game_on:
         ball.reset()
         scoreboard.r_point()
         scoreboard.update_score()
+
+    # If one player has scored WINNING_SCORE number, game over
+    if scoreboard.l_score == WINNING_SCORE or scoreboard.r_score == WINNING_SCORE:
+        scoreboard.game_over()
+        game_on = False
 
 
 screen.exitonclick()
