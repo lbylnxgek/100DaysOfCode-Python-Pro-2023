@@ -11,10 +11,8 @@ screen.bgcolor("black")
 screen.title("Pong!")
 screen.tracer(0)
 
-# Draw dashed center line
-center_line = Scoreboard()
-center_line.draw_centerline()
-screen.update()
+scoreboard = Scoreboard()
+scoreboard.draw_centerline()
 
 r_paddle = Paddle((350, 0))
 l_paddle = Paddle((-350, 0))
@@ -48,10 +46,14 @@ while game_on:
     # Detect when ball misses right paddle
     if ball.xcor() > 380:
         ball.reset()
+        scoreboard.l_point()
+        scoreboard.update_score()
 
     # Detect when ball misses left paddle
     if ball.xcor() < -380:
         ball.reset()
+        scoreboard.r_point()
+        scoreboard.update_score()
 
 
 screen.exitonclick()
