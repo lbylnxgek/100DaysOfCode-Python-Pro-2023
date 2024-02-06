@@ -175,3 +175,8 @@ My solutions & other work for the projects included in the [Python Pro Bootcamp 
     * Speed the ball up after each contact with a paddle
     * Dashed center line
     * Game over / winner condition
+
+## Day 023 - Intermediate - The Turtle Crossing capstone project
+
+* [Capstone project 2: Turtle Crossing](/Day-023/.)
+  * After struggling with the Pong project, this one went really well.  Hopefully that means I was able to absorb the lessons learned during my difficulties.
