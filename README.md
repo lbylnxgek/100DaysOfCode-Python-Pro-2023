@@ -180,3 +180,12 @@ My solutions & other work for the projects included in the [Python Pro Bootcamp 
 
 * [Capstone project 2: Turtle Crossing](/Day-023/.)
   * After struggling with the Pong project, this one went really well.  Hopefully that means I was able to absorb the lessons learned during my difficulties.
+
+## Day 024 - Intermediate - Files, directories and paths
+
+* [Project: Mail merge](/Day-024/.)
+  * Introduction to absolute and relative paths, reading and writing files
+  * Updated the snake game to save the high score to a file so it can be reread the next time the program runs
+  * Created a simple mail merge program, my version does the following:
+    * Only reads the starting_letter.txt file once
+    * Replaces Angela's name with Zane's!
