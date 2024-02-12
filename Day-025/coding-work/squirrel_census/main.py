@@ -1,22 +1,31 @@
 import pandas
 
+# Read CSV data file
 data = pandas.read_csv("2018_Central_Park_Squirrel_Census_-_Squirrel_Data.csv")
-grey_squirrel_count = len(data[data["Primary Fur Color"] == "Gray"])
-cinnamon_squirrel_count = len(data[data["Primary Fur Color"] == "Cinnamon"])
-black_squirrel_count = len(data[data["Primary Fur Color"] == "Black"])
-# print(grey_squirrel_count)
-# print(cinnamon_squirrel_count)
-# print(black_squirrel_count)
 
-data_dict = {
-    "Fur Color": ["Gray", "Cinnamon", "Black"],
-    "Count": [grey_squirrel_count, cinnamon_squirrel_count, black_squirrel_count],
-}
-print(data_dict)
+# Get numpy.ndarray of unique colors from data, excluding blanks
+# This avoids needing to know the colors ahead of time
+fur_colors = data["Primary Fur Color"].dropna().unique()
+fur_colors.sort()
 
+# Create colors and count lists
+fur_colors_list = []
+fur_colors_count_list = []
+for color in fur_colors:
+    fur_colors_list.append(color)
+    count = len(data[data["Primary Fur Color"] == color])
+    fur_colors_count_list.append(count)
+
+# Create dictionary from lists
+data_dict = {}
+data_dict["Fur Color"] = fur_colors_list
+data_dict["Count"] = fur_colors_count_list
+
+# Create dataframe from dictionary
 df = pandas.DataFrame(data_dict)
 print(df)
 
+# Output to CSV file
 df.to_csv("squirrel_color_count.csv")
 
 # NOTE for later - or not, as the case may be.  Tired of fighting with it for now:
@@ -36,11 +45,4 @@ df.to_csv("squirrel_color_count.csv")
 # Black                    103
 # Cinnamon                 392
 # Gray                    2473
-
-# This produces a list of colors excluding blanks, which *in theory* should
-# be useful in a for loop to grab counts, again without having to know all
-# of the fur colors ahead of time.  I may be able to use this one with
-# her solution, we'll see.  type() reports numpy.ndarray, which I am not
-# currently familiar with.
-# fur_colors = data["Primary Fur Color"].dropna().unique()
-# fur_colors.sort()
+# Purple                     1
