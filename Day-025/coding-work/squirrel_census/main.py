@@ -1,6 +1,23 @@
 import pandas
 
 data = pandas.read_csv("2018_Central_Park_Squirrel_Census_-_Squirrel_Data.csv")
+grey_squirrel_count = len(data[data["Primary Fur Color"] == "Gray"])
+cinnamon_squirrel_count = len(data[data["Primary Fur Color"] == "Cinnamon"])
+black_squirrel_count = len(data[data["Primary Fur Color"] == "Black"])
+# print(grey_squirrel_count)
+# print(cinnamon_squirrel_count)
+# print(black_squirrel_count)
+
+data_dict = {
+    "Fur Color": ["Gray", "Cinnamon", "Black"],
+    "Count": [grey_squirrel_count, cinnamon_squirrel_count, black_squirrel_count],
+}
+print(data_dict)
+
+df = pandas.DataFrame(data_dict)
+print(df)
+
+df.to_csv("squirrel_color_count.csv")
 
 # NOTE for later - or not, as the case may be.  Tired of fighting with it for now:
 # This produces a nice dataframe (below), but I was unable to remove the
