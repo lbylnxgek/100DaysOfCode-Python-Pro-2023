@@ -189,3 +189,18 @@ My solutions & other work for the projects included in the [Python Pro Bootcamp 
   * Created a simple mail merge program, my version does the following:
     * Only reads the starting_letter.txt file once
     * Replaces Angela's name with Zane's!
+
+## Day 025 - Intermediate - Working with CSV data and the Pandas library
+
+* [Project: U. S. States map quiz](/Day-025/.)
+* Lots of coding work and examples in this lesson:
+  * Opening a CSV file using the CSV module vs Pandas
+  * Working with CSV data using column labels
+  * Creating a Python dictionary & turning it into a Pandas dataframe
+  * Writing to CSV files
+  * Central Park (NYC) Squirrel Census!
+    * My solution creates a list of non-blank, unique colors from the source data so they don't have to be known beforehand
+  * I feel like I could use a lot more experience with Pandas, still struggling with the syntax a bit
+* My favorite Dr. Yu quote in this lesson:
+  * "So much faff..." (in reference to code required for reading CSV with the built-in csv module versus Pandas)
+  * Faff (plural faffs) (Britain, Ireland, Australia, New Zealand, slang): An overcomplicated task, especially one perceived as a waste of time.
