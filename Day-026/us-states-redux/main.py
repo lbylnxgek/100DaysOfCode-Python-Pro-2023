@@ -31,10 +31,9 @@ while len(correct_guesses) < 50:
     # Check for exit condition
     if answer_state == "Exit":
         # Create list of states to learn
-        states_to_learn = []
-        for state in states_list:
-            if state not in correct_guesses:
-                states_to_learn.append(state)
+        states_to_learn = [
+            state for state in states_list if state not in correct_guesses
+        ]
 
         # Create dictionary
         data_dict = {"State": states_to_learn}
