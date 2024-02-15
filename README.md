@@ -204,3 +204,9 @@ My solutions & other work for the projects included in the [Python Pro Bootcamp 
 * My favorite Dr. Yu quote in this lesson:
   * "So much faff..." (in reference to code required for reading CSV with the built-in csv module versus Pandas)
   * Faff (plural faffs) (Britain, Ireland, Australia, New Zealand, slang): An overcomplicated task, especially one perceived as a waste of time.
+
+## Day 026 - Intermediate - List comprehension and the NATO alphabet
+
+* [Project: The NATO alphabet](/Day-026/.)
+  * List and dictionary comprehension is very powerful, if a bit terse at first.  Feels like I have a pretty good handle on it, although for some reason I did make the very last statement more complicated than it necessary.  It worked but the output what not quite as expected.  I was able to fix it after reviewing the lessons and thinking a bit more.
+  * The U. S. States map quiz was also updated to use list comprehension to create the states to be learned CSV file
