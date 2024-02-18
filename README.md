@@ -210,3 +210,14 @@ My solutions & other work for the projects included in the [Python Pro Bootcamp 
 * [Project: The NATO alphabet](/Day-026/.)
   * List and dictionary comprehension is very powerful, if a bit terse at first.  Feels like I have a pretty good handle on it, although for some reason I did make the very last statement more complicated than it necessary.  It worked but the output what not quite as expected.  I was able to fix it after reviewing the lessons and thinking a bit more.
   * The U. S. States map quiz was also updated to use list comprehension to create the states to be learned CSV file
+
+## Day 027 - Intermediate - Tkinter args kwargs and creating GUI programs
+
+* [Project: Miles to Kilometers GUI using Tkinter](/Day-027/.)
+  * Unlimited arguments, created as a tuple in the function & used like positional arguments
+  * Unlimited keyword arguments, created as a dictionary in the function & used like keyword arguments
+  * Tkinter uses kwargs largely because it was ported from TCL and this was the most efficient way of doing so
+  * My favorite Dr. Yu quotes in this lesson:
+    * "Our label is bang in the middle."
+    * "Bog standard..."
+      * Ordinary, basic, standard without extra features or modification; unexceptional or uninspired.
