@@ -10,11 +10,15 @@
         "Inigo",
         "iterrows",
         "Karel",
+        "kwargs",
         "ndarray",
+        "padx",
+        "pady",
         "Reeborg",
         "reeborgs",
         "RTFD",
         "setworldcoordinates",
+        "Tkinter",
         "Udemy"
     ]
 }
