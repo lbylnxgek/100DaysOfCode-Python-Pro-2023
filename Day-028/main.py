@@ -7,20 +7,46 @@ RED = "#e7305b"
 GREEN = "#9bdeac"
 YELLOW = "#f7f5dd"
 FONT_NAME = "Courier"
-WORK_MIN = 25
-SHORT_BREAK_MIN = 5
-LONG_BREAK_MIN = 20
+# WORK_MIN = 25
+# SHORT_BREAK_MIN = 5
+# LONG_BREAK_MIN = 20
+WORK_MIN = 1
+SHORT_BREAK_MIN = 0.5
+LONG_BREAK_MIN = 2
+
+# Global variable for counter repetitions
+reps = 0
 
 # ---------------------------- TIMER RESET ------------------------------- #
 
 
 # ---------------------------- TIMER MECHANISM ------------------------------- #
 def start_timer():
-    count_down(5 * 60)
+    global reps
+    reps += 1
+    print(reps)
+
+    work_sec = WORK_MIN * 60
+    short_break_sec = SHORT_BREAK_MIN * 60
+    long_break_sec = LONG_BREAK_MIN * 60
+
+    # Set timer to long_break_sec if rep number is 8
+    if reps % 8 == 0:
+        count_down(long_break_sec)
+        timer_label.config(text="Break", fg=RED)
+    # Set timer to short_break_sec if rep number is 2, 4 or 6
+    elif reps % 2 == 0:
+        count_down(short_break_sec)
+        timer_label.config(text="Break", fg=PINK)
+    # Set timer to work_sec if rep number is 1, 3, 5 or 7
+    else:
+        count_down(work_sec)
+        timer_label.config(text="Work", fg=GREEN)
 
 
 # ---------------------------- COUNTDOWN MECHANISM ------------------------------- #
 def count_down(count):
+    global reps
 
     count_min = math.floor(count / 60)
     count_sec = count % 60
@@ -30,6 +56,8 @@ def count_down(count):
     canvas.itemconfig(timer_text, text=f"{count_min}:{count_sec}")
     if count > 0:
         window.after(1000, count_down, count - 1)
+    elif reps < 8:
+        start_timer()
 
 
 # ---------------------------- UI SETUP ------------------------------- #
