@@ -10,9 +10,9 @@ FONT_NAME = "Courier"
 # WORK_MIN = 25
 # SHORT_BREAK_MIN = 5
 # LONG_BREAK_MIN = 20
-WORK_MIN = 1
-SHORT_BREAK_MIN = 0.5
-LONG_BREAK_MIN = 2
+WORK_MIN = 0.2
+SHORT_BREAK_MIN = 0.1
+LONG_BREAK_MIN = 0.5
 
 # Global variable for counter repetitions
 reps = 0
@@ -56,8 +56,13 @@ def count_down(count):
     canvas.itemconfig(timer_text, text=f"{count_min}:{count_sec}")
     if count > 0:
         window.after(1000, count_down, count - 1)
-    elif reps < 8:
+    else:
         start_timer()
+        marks = ""
+        work_reps = math.floor(reps / 2)
+        for _ in range(work_reps):
+            marks += "✔"
+        check_marks.config(text=marks)
 
 
 # ---------------------------- UI SETUP ------------------------------- #
@@ -82,7 +87,7 @@ start_button.grid(column=0, row=2)
 reset_button = Button(text="Reset")
 reset_button.grid(column=2, row=2)
 
-check_marks = Label(text="✔", bg=YELLOW, fg=GREEN)
+check_marks = Label(bg=YELLOW, fg=GREEN, font=(FONT_NAME, 25))
 check_marks.grid(column=1, row=3)
 
 window.mainloop()
