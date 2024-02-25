@@ -7,24 +7,30 @@ RED = "#e7305b"
 GREEN = "#9bdeac"
 YELLOW = "#f7f5dd"
 FONT_NAME = "Courier"
-# WORK_MIN = 25
-# SHORT_BREAK_MIN = 5
-# LONG_BREAK_MIN = 20
-WORK_MIN = 0.2
-SHORT_BREAK_MIN = 0.1
-LONG_BREAK_MIN = 0.5
+WORK_MIN = 25
+SHORT_BREAK_MIN = 5
+LONG_BREAK_MIN = 20
 
-# Global variable for counter repetitions
+# Global variable for counter repetitions & timer
 reps = 0
+timer = None
+
 
 # ---------------------------- TIMER RESET ------------------------------- #
+def reset_timer():
+    window.after_cancel(timer)
+    canvas.itemconfig(timer_text, text="00:00")
+    timer_label.config(text="Timer")
+    check_marks.config(text="")
+    global reps
+    reps = 0
 
 
 # ---------------------------- TIMER MECHANISM ------------------------------- #
 def start_timer():
     global reps
     reps += 1
-    print(reps)
+    # print(reps)
 
     work_sec = WORK_MIN * 60
     short_break_sec = SHORT_BREAK_MIN * 60
@@ -55,7 +61,8 @@ def count_down(count):
 
     canvas.itemconfig(timer_text, text=f"{count_min}:{count_sec}")
     if count > 0:
-        window.after(1000, count_down, count - 1)
+        global timer
+        timer = window.after(1000, count_down, count - 1)
     else:
         start_timer()
         marks = ""
@@ -84,10 +91,10 @@ canvas.grid(column=1, row=1)
 start_button = Button(text="Start", command=start_timer)
 start_button.grid(column=0, row=2)
 
-reset_button = Button(text="Reset")
+reset_button = Button(text="Reset", command=reset_timer)
 reset_button.grid(column=2, row=2)
 
-check_marks = Label(bg=YELLOW, fg=GREEN, font=(FONT_NAME, 25))
+check_marks = Label(bg=YELLOW, fg=GREEN, font=(FONT_NAME, 15))
 check_marks.grid(column=1, row=3)
 
 window.mainloop()
