@@ -221,3 +221,9 @@ My solutions & other work for the projects included in the [Python Pro Bootcamp 
     * "Our label is bang in the middle."
     * "Bog standard..."
       * Ordinary, basic, standard without extra features or modification; unexceptional or uninspired.
+
+## Day 028 - Intermediate - Tkinter dynamic typing and the Pomodoro GUI
+
+* [Project: Pomodoro GUI](/Day-028/.)
+  * I have to laugh because a recently purchased a TickTime cube for the same purpose
+  * This might be a good project to add a few additional features to and see about packaging it up as a stand-alone executable.  Project for later.
