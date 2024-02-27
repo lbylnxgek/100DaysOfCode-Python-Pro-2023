@@ -2,7 +2,22 @@ from tkinter import *
 
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
 
+
 # ---------------------------- SAVE PASSWORD ------------------------------- #
+def save():
+    website = website_entry.get()
+    account = account_entry.get()
+    password = password_entry.get()
+
+    with open(f"./data.txt", mode="a") as data_file:
+        data_file.write(f"{website} | {account} | {password}\n")
+
+    website_entry.delete(0, END)
+    account_entry.delete(0, END)
+    account_entry.insert(0, string="bob@loblaw.com")
+    password_entry.delete(0, END)
+    website_entry.focus()
+
 
 # ---------------------------- UI SETUP ------------------------------- #
 window = Tk()
@@ -19,12 +34,14 @@ website_label.grid(row=1, column=0)
 
 website_entry = Entry(width=50)
 website_entry.grid(row=1, column=1, columnspan=2)
+website_entry.focus()
 
 account_label = Label(text="Email/Username:")
 account_label.grid(row=2, column=0)
 
 account_entry = Entry(width=50)
 account_entry.grid(row=2, column=1, columnspan=2)
+account_entry.insert(0, string="bob@loblaw.com")
 
 password_label = Label(text="Password:")
 password_label.grid(row=3, column=0)
@@ -35,7 +52,7 @@ password_entry.grid(row=3, column=1)
 generate_password_button = Button(text="Generate Password")
 generate_password_button.grid(row=3, column=2)
 
-add_record_button = Button(text="Add", width=42)
+add_record_button = Button(text="Add", width=42, command=save)
 add_record_button.grid(row=4, column=1, columnspan=2)
 
 window.mainloop()
