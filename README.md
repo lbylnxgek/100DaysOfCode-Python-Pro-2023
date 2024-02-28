@@ -227,3 +227,13 @@ My solutions & other work for the projects included in the [Python Pro Bootcamp 
 * [Project: Pomodoro GUI](/Day-028/.)
   * I have to laugh because a recently purchased a TickTime cube for the same purpose
   * This might be a good project to add a few additional features to and see about packaging it up as a stand-alone executable.  Project for later.
+
+## Day 029 - Intermediate - Building a password manager GUI with Tkinter
+
+* [Project: Password GUI](/Day-029/.)
+  * This lesson introduced some new Tkinter features, like displaying information and error dialog boxes
+  * This lesson also used pyperclip, a handy module for clipboard copy/paste functions
+  * The password generation code from day 5 was reused, with some modifications
+    * Change for loops to list comprehension
+    * Use the .join method to convert a list to a string
+  * While this app only creates new entries, it could be expanded to include a search function to find existing entries
