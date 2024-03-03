@@ -96,8 +96,15 @@ def save():
             title="D'oh!", message="Please don't leave any fields empty"
         )
     else:
+        with open(f"./data.json", mode="r") as data_file:
+            # Read existing data from file as dictionary
+            data = json.load(data_file)
+            # Add new entry to dictionary
+            data.update(new_data)
+
         with open(f"./data.json", mode="w") as data_file:
-            json.dump(new_data, data_file, indent=4)
+            # Write all data to file as JSON
+            json.dump(data, data_file, indent=4)
 
             website_entry.delete(0, END)
             account_entry.delete(0, END)
