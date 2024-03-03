@@ -81,20 +81,29 @@ def generate_password():
 
 # ---------------------------- FIND PASSWORD ------------------------------- #
 def find_password():
-    with open(f"./data.json", mode="r") as data_file:
-        # Read existing data from file as dictionary
-        data = json.load(data_file)
-
     website = website_entry.get()
-
-    if website in data:
-        account = data[website]["account"]
-        password = data[website]["password"]
-        pyperclip.copy(password)
-        messagebox.showinfo(title=f"{website}", message=f"Email: {account}\nPassword: {password}\n\nPassword copied to clipboard.")
+    try:
+        with open("./data.json", mode="r") as data_file:
+            # Read existing data from file as dictionary
+            data = json.load(data_file)
+    except FileNotFoundError:
+        messagebox.showerror(
+            title="Error!",
+            message="No data file found, please save at least one record.",
+        )
     else:
-        messagebox.showinfo(title=f"{website}", message="No details for the website exist.")
-
+        if website in data:
+            account = data[website]["account"]
+            password = data[website]["password"]
+            pyperclip.copy(password)
+            messagebox.showinfo(
+                title=f"{website}",
+                message=f"Email: {account}\nPassword: {password}\n\nPassword copied to clipboard.",
+            )
+        else:
+            messagebox.showinfo(
+                title=f"{website}", message="No details for the website exist."
+            )
 
 
 # ---------------------------- SAVE PASSWORD ------------------------------- #
@@ -116,13 +125,13 @@ def save():
     else:
         # Open existing data file, if one exists
         try:
-            with open(f"./data.json", mode="r") as data_file:
+            with open("./data.json", mode="r") as data_file:
                 # Read existing data from file as dictionary
                 data = json.load(data_file)
 
         # No existing data file, create one
         except FileNotFoundError:
-            with open(f"./data.json", mode="w") as data_file:
+            with open("./data.json", mode="w") as data_file:
                 # Write data to file as JSON
                 json.dump(new_data, data_file, indent=4)
 
@@ -131,15 +140,14 @@ def save():
             data.update(new_data)
 
             # Write data to file as JSON
-            with open(f"./data.json", mode="w") as data_file:
+            with open("./data.json", mode="w") as data_file:
                 json.dump(data, data_file, indent=4)
-
-
-    website_entry.delete(0, END)
-    account_entry.delete(0, END)
-    account_entry.insert(0, string="bob@loblaw.com")
-    password_entry.delete(0, END)
-    website_entry.focus()
+        finally:
+            website_entry.delete(0, END)
+            account_entry.delete(0, END)
+            account_entry.insert(0, string="bob@loblaw.com")
+            password_entry.delete(0, END)
+            website_entry.focus()
 
 
 # ---------------------------- UI SETUP ------------------------------- #
