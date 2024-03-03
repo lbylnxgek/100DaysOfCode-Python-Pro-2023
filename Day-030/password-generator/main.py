@@ -79,6 +79,24 @@ def generate_password():
     pyperclip.copy(password)
 
 
+# ---------------------------- FIND PASSWORD ------------------------------- #
+def find_password():
+    with open(f"./data.json", mode="r") as data_file:
+        # Read existing data from file as dictionary
+        data = json.load(data_file)
+
+    website = website_entry.get()
+
+    if website in data:
+        account = data[website]["account"]
+        password = data[website]["password"]
+        pyperclip.copy(password)
+        messagebox.showinfo(title=f"{website}", message=f"Email: {account}\nPassword: {password}\n\nPassword copied to clipboard.")
+    else:
+        messagebox.showinfo(title=f"{website}", message="No details for the website exist.")
+
+
+
 # ---------------------------- SAVE PASSWORD ------------------------------- #
 def save():
     website = website_entry.get()
@@ -137,9 +155,12 @@ canvas.grid(row=0, column=1)
 website_label = Label(text="Website:")
 website_label.grid(row=1, column=0)
 
-website_entry = Entry(width=50)
-website_entry.grid(row=1, column=1, columnspan=2)
+website_entry = Entry(width=32)
+website_entry.grid(row=1, column=1)
 website_entry.focus()
+
+search_button = Button(text="Search", width=14, command=find_password)
+search_button.grid(row=1, column=2)
 
 account_label = Label(text="Email/Username:")
 account_label.grid(row=2, column=0)
@@ -157,7 +178,7 @@ password_entry.grid(row=3, column=1)
 generate_password_button = Button(text="Generate Password", command=generate_password)
 generate_password_button.grid(row=3, column=2)
 
-add_record_button = Button(text="Add", width=42, command=save)
+add_record_button = Button(text="Add", width=44, command=save)
 add_record_button.grid(row=4, column=1, columnspan=2)
 
 window.mainloop()
