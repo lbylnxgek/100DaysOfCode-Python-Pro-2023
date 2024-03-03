@@ -96,21 +96,32 @@ def save():
             title="D'oh!", message="Please don't leave any fields empty"
         )
     else:
-        with open(f"./data.json", mode="r") as data_file:
-            # Read existing data from file as dictionary
-            data = json.load(data_file)
+        # Open existing data file, if one exists
+        try:
+            with open(f"./data.json", mode="r") as data_file:
+                # Read existing data from file as dictionary
+                data = json.load(data_file)
+
+        # No existing data file, create one
+        except FileNotFoundError:
+            with open(f"./data.json", mode="w") as data_file:
+                # Write data to file as JSON
+                json.dump(new_data, data_file, indent=4)
+
+        else:
             # Add new entry to dictionary
             data.update(new_data)
 
-        with open(f"./data.json", mode="w") as data_file:
-            # Write all data to file as JSON
-            json.dump(data, data_file, indent=4)
+            # Write data to file as JSON
+            with open(f"./data.json", mode="w") as data_file:
+                json.dump(data, data_file, indent=4)
 
-            website_entry.delete(0, END)
-            account_entry.delete(0, END)
-            account_entry.insert(0, string="bob@loblaw.com")
-            password_entry.delete(0, END)
-            website_entry.focus()
+
+    website_entry.delete(0, END)
+    account_entry.delete(0, END)
+    account_entry.insert(0, string="bob@loblaw.com")
+    password_entry.delete(0, END)
+    website_entry.focus()
 
 
 # ---------------------------- UI SETUP ------------------------------- #

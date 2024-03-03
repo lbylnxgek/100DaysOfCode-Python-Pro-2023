@@ -1,10 +1,14 @@
 {
     "DogBook": {
-        "account": "bob@loblaw.com",
-        "password": "0f1#!5N*KWULE!Ry"
+        "account": "meara@loblaw.com",
+        "password": "+Su$bx6d7C&x5i&5x"
     },
     "CatBook": {
         "account": "jack@loblaw.com",
-        "password": "!*%0M7qklzMoI%1C9"
+        "password": "!J&jANiHkY2HA&7"
+    },
+    "GitHub": {
+        "account": "bob@loblaw.com",
+        "password": "b&#A#J01TNrq$Q"
     }
 }
