@@ -237,3 +237,20 @@ My solutions & other work for the projects included in the [Python Pro Bootcamp 
     * Change for loops to list comprehension
     * Use the .join method to convert a list to a string
   * While this app only creates new entries, it could be expanded to include a search function to find existing entries
+
+## Day 030 - Intermediate - Errors, exceptions and JSON data
+
+* [Project: Password GUI redux](/Day-030/.)
+  * This lesson added a try/except block to validate the user input (alphabetic characters only) and re-prompted the user until the condition was met
+  * This lesson also added some nice features to the password GUI:
+    * Change the data storage from txt to JSON
+    * Add try/except block to check for a data file (add new record)
+    * Add search button & function
+    * Add try/except block to check for a data file (search)
+    * My version copies the password to the clipboard when a matching record is found
+  * Important concepts from this lesson:
+    * Be specific with except, using a bare one may catch the error but not do what you intend.  Use multiple except blocks as necessary.
+    * Only use exception handling when you don't have an easy alternative (eg: if/else)
+  * It seems like reading the entire JSON data file might be inefficient, however:  Since json.load() converts the data to a dictionary it allows an existing record to be updated, plus dictionaries do not allow duplicates.
+  * My favorite Dr. Yu quote in this lesson:
+    * "Put the problematic code in a try jail."
