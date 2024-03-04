@@ -254,3 +254,11 @@ My solutions & other work for the projects included in the [Python Pro Bootcamp 
   * It seems like reading the entire JSON data file might be inefficient, however:  Since json.load() converts the data to a dictionary it allows an existing record to be updated, plus dictionaries do not allow duplicates.
   * My favorite Dr. Yu quote in this lesson:
     * "Put the problematic code in a try jail."
+
+## Day 031 - Intermediate - Flash card app capstone project
+
+* [Project: Flash card app](/Day-031/.)
+  * French to English flash cards
+  * This project was frankly a bit of a struggle.  In part I think because Tkinter is a bit challenging, and that's putting it nicely.  If I was designing a commercial GUI app I would look for alternatives.  Partly something easier to work with, partly something that looks a bit more modern.
+  * That said I did fairly well at reading & writing CSV data using Pandas.  Learned a few more tricks to make working with it a bit easier as well, so that's good.
+  * The code could use a bit more error checking, it might also be interesting to add other languages or even something not language-related.  Possibly a project for the future, we'll see.
